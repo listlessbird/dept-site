@@ -17,9 +17,9 @@ export function MobileNav({
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             className="h-6 w-6"
           >
             <line x1="3" x2="21" y1="6" y2="6" />
@@ -34,6 +34,7 @@ export function MobileNav({
           {navItems.map((item) => (
             <a
               href={item.href}
+              key={item.name}
               className="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
             >
               {item.name}

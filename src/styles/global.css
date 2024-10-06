@@ -99,3 +99,7 @@
 
   gap: var(--space-gap);
 }
+
+.g-t {
+  grid-template-columns: repeat(14, minmax(0, 1fr));
+}
