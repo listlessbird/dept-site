@@ -1,0 +1,62 @@
+---
+import Logo from "@/components/logo.astro";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { MobileNav } from "@/sections/mobile-nav";
+
+const navItems = [
+  { name: "HOME", href: "/" },
+  { name: "PEOPLE", href: "/people" },
+  { name: "ACADEMICS", href: "/academics" },
+  { name: "RESEARCH", href: "/research" },
+  { name: "EVENTS", href: "/events" },
+  { name: "GALLERY", href: "/gallery" },
+  { name: "REACH US", href: "/contact" },
+]
+---
+
+<header class="flex flex-col px-4">
+    <div class="flex gap-2">
+        <Logo />
+        <div class="flex flex-col gap-1">
+            <h1 class="scroll-m-20 leading-[1] text-md font-extrabold tracking-tight lg:text-3xl md:leading-normal text-pretty">
+                Department of <br />
+                Electronics and Communication Engineering
+            </h1>
+            <h2 class="md:leading-7 font-semibold leading-[1] text-sm text-pretty">
+                Goverment Engineering College Palakkad
+            </h2>
+        </div>
+    </div>
+
+	<div class="my-2">
+		<Separator client:visible className="bg-cyanCustom h-[2px]" />
+	</div>
+<nav class="">
+  <div class="mx-auto px-4">
+    <div class="flex items-center justify-between">
+      <div class="hidden md:flex space-x-4 justify-between w-full">
+        {navItems.map((item, index) => (
+          <div>
+            <a
+              href={item.href}
+              class="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              {item.name}
+            </a>
+            {/* {index <div navItems.length - 1 && (
+              <span class="text-gray-300 self-center">|</span>
+            )} */}
+          </div>
+        ))}
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden self-center mx-auto">
+        <MobileNav navItems={navItems} client:load/>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
