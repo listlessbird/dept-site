@@ -1,8 +1,6 @@
 ---
 import Logo from "@/components/logo.astro";
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { MobileNav } from "@/sections/mobile-nav";
 
 const navItems = [
@@ -16,7 +14,7 @@ const navItems = [
 ]
 ---
 
-<header class="flex flex-col px-4 col-start-2 col-end-[14]">
+<header class="flex flex-col px-4 col-start-2 col-end-[14] h-fit">
     <div class="flex gap-2">
         <Logo />
         <div class="flex flex-col gap-1">
@@ -52,7 +50,6 @@ const navItems = [
         ))}
       </div>
 
-      <!-- Mobile menu button -->
       <div class="md:hidden self-center mx-auto">
         <MobileNav navItems={navItems} client:load/>
       </div>
