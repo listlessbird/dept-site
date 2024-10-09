@@ -57,9 +57,15 @@ export function StackedEventCarousel() {
               "c-item",
             )}
             style={{
-              top: `${index * 30}px`,
+              bottom: `${index * 100}px`,
               zIndex: 3 - index,
-              transform: `translateZ(${(2 - index) * -30}px) scale(${1 - index * 0.05})`,
+              transform: `
+                translateZ(${-index * 50}px) 
+                scale(${1 - index * 0.1})
+              `,
+              height: `${340 - index * 30}px`,
+              width: `${100 - index * 5}%`,
+              left: `${index * 2.5}%`,
             }}
           >
             <CardContent>
