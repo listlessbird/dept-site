@@ -48,31 +48,38 @@ export function StackedEventCarousel() {
   return (
     <div className="relative w-full max-w-3xl mx-auto h-[400px]">
       <div className="absolute inset-0 carousel-root">
-        {getVisibleEvents().map((event, index) => (
-          <Card
-            key={event.id}
-            className={cn(
-              "absolute inset-x-0 flex items-center justify-center text-2xl font-bold text-muted-foreground h-[300px] w-full transition-all duration-300 ease-in-out",
-              debugColors[index],
-              "c-item",
-            )}
-            style={{
-              bottom: `${index * 100}px`,
-              zIndex: 3 - index,
-              transform: `
-                translateZ(${-index * 50}px) 
-                scale(${1 - index * 0.1})
-              `,
-              height: `${340 - index * 30}px`,
-              width: `${100 - index * 5}%`,
-              left: `${index * 2.5}%`,
-            }}
-          >
-            <CardContent>
-              <p>{event.title}</p>
-            </CardContent>
-          </Card>
-        ))}
+        <AnimatePresence initial={false}>
+          {getVisibleEvents().map((event, index) => (
+            <motion.div
+              key={event.id}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                bottom: `${index * 100}px`,
+                zIndex: 3 - index,
+                height: `${340 - index * 30}px`,
+                width: `${100 - index * 5}%`,
+                left: `${index * 2.5}%`,
+                scale: 1 - index * 0.1,
+              }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ duration: 0.3 }}
+              className={cn("absolute inset-x-0", debugColors[index])}
+            >
+              <Card
+                className={cn(
+                  "flex items-center justify-center text-2xl font-bold text-muted-foreground transition-all duration-300 ease-in-out size-full",
+                  "c-item",
+                )}
+              >
+                <CardContent>
+                  <p>{event.title}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </div>
       <div className="absolute bottom-0 left-0 right-0 flex justify-center space-x-4 pb-4">
         <Button onClick={prevSlide} variant="outline" size="icon">
