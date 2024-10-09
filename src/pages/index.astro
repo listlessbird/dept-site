@@ -5,12 +5,12 @@ import Header from "@/sections/header.astro";
 import { Separator } from "@/components/ui/separator";
 import Section from "@/sections/section.astro";
 import { cn } from "@/lib/utils";
+import { StackedEventCarousel } from "@/components/carousel";
 
 const normalAlignment = "col-start-2 col-end-[14]";
 ---
 
 <script>
-  const msgHod = document.querySelector(".msg-hod") as HTMLElement;
   const msgNode = document.querySelector(".msg-hod h3") as HTMLElement;
   const mediaQuery = window.matchMedia("(min-width: 768px)");
 
@@ -72,6 +72,12 @@ const normalAlignment = "col-start-2 col-end-[14]";
           Communication for the betterment of the society"
         </p>
       </blockquote>
+    </Section>
+    <Section wrapperClass={cn(normalAlignment, "min-h-dvh")} title="News">
+      <p class="leading-7 [&:not(:first-child)]:mt-6 font-medium">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quia
+      </p>
+      <StackedEventCarousel client:load />
     </Section>
   </div>
 </Layout>

@@ -104,3 +104,12 @@
   grid-template-columns: repeat(14, minmax(0, 1fr));
   grid-template-rows: auto auto 1fr;
 }
+.carousel-root {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.c-item {
+  backface-visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
