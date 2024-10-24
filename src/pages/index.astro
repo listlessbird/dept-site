@@ -9,6 +9,7 @@ import { StackedEventCarousel } from "@/components/carousel";
 import Events from "@/sections/events.astro";
 
 const normalAlignment = "col-start-2 col-end-[14]";
+const fullBleed = "col-start-1 col-end-[-1]";
 ---
 
 <script>
@@ -29,8 +30,8 @@ const normalAlignment = "col-start-2 col-end-[14]";
 </script>
 
 <Layout title="Welcome to Astro.">
-  <div class="bg-white min-h-screen pt-5 grid g-t space-y-2">
-    <Header />
+  <div class="bg-white min-h-screen pt-5 grid g-t space-y-2 py-2">
+    <!-- <Header /> -->
     <div class="h-[400px] w-full bg-gray-300 col-start-1 col-end-[-1]"></div>
     <Section title="About the Department" wrapperClass={normalAlignment}>
       <p class="leading-7 [&:not(:first-child)]:mt-6 font-medium">
@@ -83,7 +84,7 @@ const normalAlignment = "col-start-2 col-end-[14]";
       </div>
     </Section>
     <Section wrapperClass={cn(normalAlignment, "")} title="Events">
-      <Events client:load />
+      <Events />
     </Section>
   </div>
 </Layout>

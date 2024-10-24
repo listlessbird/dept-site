@@ -6,7 +6,7 @@ export function DateCard({
   date: { day: string; month: string; year: string };
 }) {
   return (
-    <Card className="bg-zinc-300 p-2">
+    <Card className="bg-zinc-300 p-2 max-h-[160px]">
       <CardContent className="bg-red-50 py-4 px-6 text-center rounded-md">
         <p className="font-bold">{date.day}</p>
       </CardContent>

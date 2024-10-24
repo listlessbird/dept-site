@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+import Emblem from "@/assets/emblem.png";
+import NBA from "@/assets/nba-a.png";
+import { Icon } from "astro-icon/components";
+import { cn } from "@/lib/utils";
+
+const currentYear = new Date().getFullYear();
+
+type Props = {
+  wrapperClass: string;
+};
+
+const { wrapperClass } = Astro.props;
+---
+
+<footer
+  class={cn(
+    "bg-blue-100 py-8 px-4 md:px-8 border-t border-blue-600",
+    wrapperClass
+  )}
+>
+  <div
+    class="container mx-auto flex flex-col md:flex-row justify-between md:items-center"
+  >
+    <div class="flex items-center mb-4 md:mb-0">
+      <Image
+        src={Emblem}
+        alt="GEC Palakkad Logo"
+        width={80}
+        height={80}
+        class="mr-4"
+      />
+      <div>
+        <h2 class="text-2xl font-bold">Government Engineering College</h2>
+        <h3 class="text-2xl font-bold">Palakkad</h3>
+      </div>
+    </div>
+    <Image
+      src={NBA}
+      alt="NBA Accreditation Logo"
+      width={80}
+      height={80}
+      class="mb-4 md:mb-0"
+    />
+  </div>
+  <div
+    class="container mx-auto mt-6 flex flex-col md:flex-row justify-between items-start md:items-center"
+  >
+    <div class="mb-4 md:mb-0">
+      <h4 class="font-bold mb-2">
+        DEPARTMENT OF ELECTRONICS AND COMMUNICATION
+      </h4>
+      <p>Government Engineering College Rd,</p>
+      <p>Mannampatta, Sreekrishnapuram,</p>
+      <p>Palakkad, Kerala, PIN-678633</p>
+    </div>
+    <div class="flex flex-col items-start md:items-end">
+      <p class="mb-2">
+        <Icon name="mdi:phone" class="inline-block w-5 h-5 mr-2" />
+        +91 XXXXX XXXXX
+      </p>
+      <p class="mb-4">
+        <Icon name="mdi:email" class="inline-block w-5 h-5 mr-2" />
+        principal@gecskp.ac.in
+      </p>
+      <div class="flex space-x-4">
+        <a href="#" class="text-gray-600 hover:text-gray-800">
+          <Icon name="mdi:linkedin" class="w-6 h-6" />
+          <span class="sr-only">LinkedIn</span>
+        </a>
+        <a href="#" class="text-gray-600 hover:text-gray-800">
+          <Icon name="mdi:instagram" class="w-6 h-6" />
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a href="#" class="text-gray-600 hover:text-gray-800">
+          <Icon name="mdi:youtube" class="w-6 h-6" />
+          <span class="sr-only">YouTube</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto mt-6 text-center text-sm">
+    <p>
+      © {currentYear} - All rights reserved DEPARTMENT OF Electronics and Communication
+      Engineering
+    </p>
+  </div>
+</footer>

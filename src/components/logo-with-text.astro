@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+import LogoImg from "@/assets/logo.png";
+---
+
+<div class="flex items-center space-x-4 p-4">
+  <div class="flex-shrink-0">
+    <Image src={LogoImg} alt="Department Logo" width={80} height={80} />
+  </div>
+  <div class="flex flex-col">
+    <h2 class="text-md md:text-xl font-bold leading-tight text-pretty">
+      Department of<br />
+      Electronics and Communication Engineering
+    </h2>
+    <p class="text-sm font-semibold text-gray-600 text-pretty">
+      Government Engineering College Palakkad
+    </p>
+  </div>
+</div>

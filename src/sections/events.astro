@@ -3,18 +3,68 @@ import { EventCalender } from "@/components/event-calender";
 
 const events = [
   {
-    title: "Annual Tech Conference",
+    title: "Web3 Developer Summit",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quia",
+      "Join industry leaders for a deep dive into the future of decentralized applications and blockchain technology.",
     date: {
-      day: "24",
+      day: "15",
+      month: "Jun",
+      year: "2024",
+    },
+  },
+  {
+    title: "AI & Machine Learning Workshop",
+    description:
+      "Hands-on workshop covering the latest developments in AI, including practical applications of machine learning.",
+    date: {
+      day: "03",
       month: "May",
-      year: "2023",
+      year: "2024",
+    },
+  },
+  {
+    title: "Startup Pitch Competition",
+    description:
+      "Watch innovative startups pitch their ideas to leading venture capitalists and angel investors.",
+    date: {
+      day: "28",
+      month: "Apr",
+      year: "2024",
+    },
+  },
+  {
+    title: "DevOps Conference",
+    description:
+      "Explore modern DevOps practices, cloud architecture, and continuous integration strategies.",
+    date: {
+      day: "10",
+      month: "Apr",
+      year: "2024",
+    },
+  },
+  {
+    title: "UX Design Masterclass",
+    description:
+      "Learn advanced user experience design principles and prototype development techniques.",
+    date: {
+      day: "20",
+      month: "Mar",
+      year: "2024",
+    },
+  },
+  {
+    title: "Cybersecurity Summit",
+    description:
+      "Expert panels on the latest cybersecurity threats and defense strategies for modern applications.",
+    date: {
+      day: "05",
+      month: "Mar",
+      year: "2024",
     },
   },
 ];
 ---
 
-<div class="min-h-[50vh]">
+<div class="min-h-[50vh] max-w-3xl mx-auto">
   <EventCalender events={events} client:load />
 </div>
