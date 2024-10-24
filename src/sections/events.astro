@@ -1,0 +1,20 @@
+---
+import { EventCalender } from "@/components/event-calender";
+
+const events = [
+  {
+    title: "Annual Tech Conference",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quia",
+    date: {
+      day: "24",
+      month: "May",
+      year: "2023",
+    },
+  },
+];
+---
+
+<div class="min-h-[50vh]">
+  <EventCalender events={events} client:load />
+</div>

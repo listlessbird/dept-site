@@ -6,6 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import Section from "@/sections/section.astro";
 import { cn } from "@/lib/utils";
 import { StackedEventCarousel } from "@/components/carousel";
+import Events from "@/sections/events.astro";
 
 const normalAlignment = "col-start-2 col-end-[14]";
 ---
@@ -73,13 +74,16 @@ const normalAlignment = "col-start-2 col-end-[14]";
         </p>
       </blockquote>
     </Section>
-    <Section wrapperClass={cn(normalAlignment, "min-h-dvh")} title="News">
+    <Section wrapperClass={cn(normalAlignment, "")} title="News">
       <p class="leading-7 [&:not(:first-child)]:mt-6 font-medium">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quia
       </p>
       <div class="mt-12">
         <StackedEventCarousel client:load />
       </div>
+    </Section>
+    <Section wrapperClass={cn(normalAlignment, "")} title="Events">
+      <Events client:load />
     </Section>
   </div>
 </Layout>
