@@ -1,0 +1,39 @@
+---
+import type { Faculty } from "@/data/faculty";
+import { cn } from "@/lib/utils";
+import { Image } from "astro:assets";
+
+type Props = {} & Faculty;
+
+const { name, designation, image, email } = Astro.props;
+---
+
+<div class="bg-zinc-300 p-4 rounded-lg shadow-md max-w-[250px] fc-card">
+  <Image
+    src={image.length > 0 ? image : "/placeholder.png"}
+    alt={name}
+    class="h-48 object-cover mb-3 rounded w-full"
+    width={150}
+    height={200}
+  />
+  <h3 class="text-lg font-semibold text-pretty capitalize">{name}</h3>
+  <p class="text-sm text-gray-600 text-pretty">{designation}</p>
+  <p class="text-sm text-gray-600 text-pretty" data-enc={email}></p>
+</div>
+
+<script>
+  const emailElements = document.querySelectorAll(".fc-card [data-enc]");
+  emailElements.forEach((element) => {
+    // @ts-ignore
+    const encodedEmail = element?.dataset.enc;
+    if (encodedEmail) {
+      try {
+        const decodedEmail = atob(encodedEmail);
+        element.textContent = decodedEmail;
+      } catch (error) {
+        console.error("Error decoding email:", error);
+        element.textContent = "Email unavailable";
+      }
+    }
+  });
+</script>

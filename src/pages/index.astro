@@ -1,8 +1,6 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../layouts/root-layout.astro";
 import "@/styles/global.css";
-import Header from "@/sections/header.astro";
-import { Separator } from "@/components/ui/separator";
 import Section from "@/sections/section.astro";
 import { cn } from "@/lib/utils";
 import { StackedEventCarousel } from "@/components/carousel";
@@ -29,7 +27,9 @@ const fullBleed = "col-start-1 col-end-[-1]";
   mediaQuery.addEventListener("change", handleMediaQueryChange);
 </script>
 
-<Layout title="Welcome to Astro.">
+<Layout
+  title="Department of Electronics and Communication Engineering | GEC PKD"
+>
   <div class="bg-white min-h-screen pt-5 grid g-t space-y-8 py-2">
     <!-- <Header /> -->
     <div class="h-[400px] w-full bg-gray-300 col-start-1 col-end-[-1]"></div>

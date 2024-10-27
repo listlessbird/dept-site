@@ -1,0 +1,15 @@
+---
+import RootLayout from "@/layouts/root-layout.astro";
+
+type Props = {
+  title: string;
+};
+
+const { title } = Astro.props;
+---
+
+<RootLayout title={title}>
+  <div class="bg-white min-h-screen pt-5 grid g-t space-y-8 py-2">
+    <slot />
+  </div>
+</RootLayout>

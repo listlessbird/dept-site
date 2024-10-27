@@ -1,0 +1,38 @@
+---
+import Layout from "@/layouts/root-layout.astro";
+import Section from "@/sections/section.astro";
+
+import "@/styles/global.css";
+
+import { faculty } from "@/data/faculty";
+import FacultyCard from "@/components/faculty-card.astro";
+import PageLayout from "@/layouts/page-layout.astro";
+import { cn } from "@/lib/utils";
+
+const normalAlignment = "col-start-2 col-end-[14]";
+---
+
+<PageLayout
+  title="Faculty of Electronics and Communication Engineering | GEC PKD"
+>
+  <Section
+    title="Faculty"
+    wrapperClass={cn(normalAlignment, "pb-[100px] space-y-8")}
+    titleClass="before:content-none"
+  >
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+    >
+      {
+        faculty.map((faculty) => (
+          <FacultyCard
+            name={faculty.name}
+            designation={faculty.designation}
+            image={faculty.image}
+            email={faculty.email}
+          />
+        ))
+      }
+    </div>
+  </Section>
+</PageLayout>
