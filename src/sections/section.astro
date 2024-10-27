@@ -10,10 +10,10 @@ type Props = {
 const { title, titleClass, wrapperClass } = Astro.props;
 ---
 
-<section class={cn("space-y-2", wrapperClass)}>
+<section class={cn("space-y-8", wrapperClass)}>
   <h3
     class={cn(
-      "scroll-m-20 text-3xl font-semibold tracking-tight before:content-[''] before:absolute before:w-[4px] before:h-[1.8ch] before:bg-cyanCustom before:-mt-2 before:left-0 before:top-[45%] before:bottom-0 relative px-2",
+      "scroll-m-20 text-xl md:text-3xl font-semibold tracking-tight before:content-[''] before:absolute before:w-[4px] before:h-[1.8ch] before:bg-cyanCustom before:-mt-2 before:left-0 before:top-[45%] before:bottom-0 relative px-2",
       titleClass
     )}
   >

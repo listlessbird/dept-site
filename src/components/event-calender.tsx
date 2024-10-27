@@ -63,7 +63,7 @@ export function EventCalender({ events }: { events: EventCalenderProps[] }) {
   return (
     <div className="flex gap-2">
       <div className="flex flex-col gap-2 flex-1 relative overflow-hidden">
-        <AnimatePresence mode="popLayout">
+        <AnimatePresence mode="popLayout" initial={false}>
           {visibleEvents.map((event, index) => (
             <motion.div
               key={`${event.title}-${startIndex + index}`}

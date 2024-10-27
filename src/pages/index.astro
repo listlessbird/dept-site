@@ -5,8 +5,9 @@ import Section from "@/sections/section.astro";
 import { cn } from "@/lib/utils";
 import { StackedEventCarousel } from "@/components/carousel";
 import Events from "@/sections/events.astro";
-
-const normalAlignment = "col-start-2 col-end-[14]";
+import { Image } from "astro:assets";
+import eceHod from "@/assets/ecehod.jpg";
+const normalAlignment = "col-start-3 col-end-[14]";
 const fullBleed = "col-start-1 col-end-[-1]";
 ---
 
@@ -49,10 +50,17 @@ const fullBleed = "col-start-1 col-end-[-1]";
     >
       <div class="flex gap-4 flex-col md:flex-row">
         <div class="md:flex-shrink-0">
-          <div class="w-full md:w-[450px] h-[250px] bg-gray-400"></div>
+          <!-- <div class="w-full md:w-[450px] h-[250px] bg-gray-400"></div> -->
+          <Image
+            src={eceHod}
+            alt="ece hod"
+            width={400}
+            height={250}
+            class="h-full md:w-[400px] bg-gray-400 rounded-md"
+          />
         </div>
-        <blockquote class="flex-grow italic">
-          <p class="leading-7 font-medium text-pretty text-lg">
+        <blockquote class="flex-grow italic max-w-screen-sm">
+          <p class="leading-7 font-medium text-pretty text-lg text-justify">
             "The electronics and communication engineering department is one of
             the most prominent departments in the college. It is the first
             department of the college to offer a bachelor's degree in
@@ -71,19 +79,14 @@ const fullBleed = "col-start-1 col-end-[-1]";
     </Section>
     <Section wrapperClass={cn(normalAlignment)} title="Mission">
       <blockquote class="italic">
-        <p
-          class="leading-7 font-medium text-pretty text-black text-xl max-w-screen-md"
-        >
+        <p class="leading-7 font-medium text-pretty text-black text-xl">
           "To mould the youth as excellent engineers in Electronics and
           Communication for the betterment of the society"
         </p>
       </blockquote>
     </Section>
     <Section wrapperClass={cn(normalAlignment, "")} title="News">
-      <p class="leading-7 [&:not(:first-child)]:mt-6 font-medium">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quia
-      </p>
-      <div class="mt-12">
+      <div class="pt-12">
         <StackedEventCarousel client:load />
       </div>
     </Section>
