@@ -30,11 +30,13 @@ const fullBleed = "col-start-1 col-end-[-1]";
 </script>
 
 <Layout title="Welcome to Astro.">
-  <div class="bg-white min-h-screen pt-5 grid g-t space-y-2 py-2">
+  <div class="bg-white min-h-screen pt-5 grid g-t space-y-8 py-2">
     <!-- <Header /> -->
     <div class="h-[400px] w-full bg-gray-300 col-start-1 col-end-[-1]"></div>
     <Section title="About the Department" wrapperClass={normalAlignment}>
-      <p class="leading-7 [&:not(:first-child)]:mt-6 font-medium">
+      <p
+        class="leading-7 [&:not(:first-child)]:mt-6 font-medium text-pretty max-w-screen-lg text-lg"
+      >
         Department of Electronics and Communication Engineering offering B.Tech
         in Electronics and Communication Engineering. Later the programme has
         been affiliated to APJ Abdul Kalam Technological University since its
@@ -50,14 +52,14 @@ const fullBleed = "col-start-1 col-end-[-1]";
           <div class="w-full md:w-[450px] h-[250px] bg-gray-400"></div>
         </div>
         <blockquote class="flex-grow italic">
-          <p class="leading-7 font-medium text-pretty">
+          <p class="leading-7 font-medium text-pretty text-lg">
             "The electronics and communication engineering department is one of
             the most prominent departments in the college. It is the first
             department of the college to offer a bachelor's degree in
             electronics and communication engineering. The department has been
             established in 1996 and has been affiliated to APJ Abdul Kalam
             Technological University since its inception from 2015 onwards.
-            B.Tech programme is accredited by NBA.""
+            B.Tech programme is accredited by NBA."
           </p>
           <p
             class="text-sm font-semibold text-gray-500 mt-2 text-start md:text-end"
@@ -69,7 +71,9 @@ const fullBleed = "col-start-1 col-end-[-1]";
     </Section>
     <Section wrapperClass={cn(normalAlignment)} title="Mission">
       <blockquote class="italic">
-        <p class="leading-7 font-medium text-pretty text-black text-lg">
+        <p
+          class="leading-7 font-medium text-pretty text-black text-xl max-w-screen-md"
+        >
           "To mould the youth as excellent engineers in Electronics and
           Communication for the betterment of the society"
         </p>
