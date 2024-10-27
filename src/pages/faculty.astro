@@ -4,7 +4,7 @@ import Section from "@/sections/section.astro";
 
 import "@/styles/global.css";
 
-import { faculty } from "@/data/faculty";
+import { faculty, staff } from "@/data/faculty";
 import FacultyCard from "@/components/faculty-card.astro";
 import PageLayout from "@/layouts/page-layout.astro";
 import { cn } from "@/lib/utils";
@@ -30,6 +30,26 @@ const normalAlignment = "col-start-2 col-end-[14]";
             designation={faculty.designation}
             image={faculty.image}
             email={faculty.email}
+          />
+        ))
+      }
+    </div>
+  </Section>
+  <Section
+    title="Technical Staff"
+    wrapperClass={cn(normalAlignment, "pb-[100px] space-y-8")}
+    titleClass="before:content-none"
+  >
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+    >
+      {
+        staff.map((staff) => (
+          <FacultyCard
+            name={staff.name}
+            designation={staff.designation}
+            image={staff.image}
+            email={staff.email}
           />
         ))
       }

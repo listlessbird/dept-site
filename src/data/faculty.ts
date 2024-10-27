@@ -5,11 +5,26 @@ export type Faculty = {
   email: string;
 };
 
+export type Staff = {
+  name: string;
+  designation: string;
+  image: string;
+  email: string;
+};
+
 const priority = {
   "Associate Professor": 4,
   "Assistant Professor": 3,
   "Assistant Professor (Contract)": 2,
   "Instructor Gr.I": 1,
+};
+
+const staffDesignationPriority: { [key: string]: number } = {
+  "Computer Programmer": 5,
+  "Trade Instructor Gr.I": 4,
+  "Trade Instructor Gr.II": 3,
+  "Instructor Gr.II": 2,
+  Tradesman: 1,
 };
 
 function sortFaculty(faculty: Faculty[]) {
@@ -20,6 +35,17 @@ function sortFaculty(faculty: Faculty[]) {
       const bPriority = priority[b.designation as keyof typeof priority] || 0;
 
       return bPriority - aPriority;
+    });
+}
+
+export function sortStaff(staff: Staff[]) {
+  return [...staff]
+    .map((e) => ({ ...e, name: e.name.toLocaleLowerCase() }))
+    .sort((a, b) => {
+      const priorityA = staffDesignationPriority[a.designation] || 0;
+      const priorityB = staffDesignationPriority[b.designation] || 0;
+
+      return priorityB - priorityA;
     });
 }
 
@@ -137,5 +163,80 @@ export const faculty: Faculty[] = sortFaculty([
     designation: "Instructor Gr.I",
     image: "",
     email: "bmxybWFsYTIwMTdzQGdtYWlsLmNvbQ==",
+  },
+]);
+
+export const staff: Staff[] = sortStaff([
+  {
+    name: "MUHAMMAD ALI M",
+    designation: "Instructor Gr.II",
+    image: "",
+    email: "YWxpYXNtbTA3N0BnbWFpbC5jb20=",
+  },
+  {
+    name: "MR. SATHYANATH VARIATH",
+    designation: "Computer Programmer",
+    image: "",
+    email: "c2F0aHlhbi5lY0BnbWFpbC5jb20=",
+  },
+  {
+    name: "SURESHBABU P",
+    designation: "Trade Instructor Gr.II",
+    image: "",
+    email: "c3VyZXNoYmFidW1nbUBnbWFpbC5jb20=",
+  },
+  {
+    name: "SARJA K K",
+    designation: "Trade Instructor Gr.II",
+    image: "",
+    email: "c2FyamFuYXphckBnbWFpbC5jb20=",
+  },
+  {
+    name: "MANOJ K P",
+    designation: "Trade Instructor Gr.I",
+    image: "",
+    email: "RW1haWwgVW5hdmFpbGFibGU=", // Email Unavailable
+  },
+  {
+    name: "MR. MAHESH C",
+    designation: "Tradesman",
+    image: "",
+    email: "RW1haWwgVW5hdmFpbGFibGU=", // Email Unavailable
+  },
+  {
+    name: "SAJITHA C",
+    designation: "Tradesman",
+    image: "",
+    email: "RW1haWwgVW5hdmFpbGFibGU=", // Email Unavailable
+  },
+  {
+    name: "SUJA M R",
+    designation: "Tradesman",
+    image: "",
+    email: "RW1haWwgVW5hdmFpbGFibGU=", // Email Unavailable
+  },
+  {
+    name: "RADHAKRISHNAN K",
+    designation: "Tradesman",
+    image: "",
+    email: "cmFkaGFrcmlzaG5hbjE5ODdAZ21haWwuY29t",
+  },
+  {
+    name: "SIVAHARI P K",
+    designation: "Tradesman",
+    image: "",
+    email: "c2l2YWhhcmlwa0BnbWFpbC5jb20=",
+  },
+  {
+    name: "SESHADRI A S",
+    designation: "Trade Instructor Gr.II",
+    image: "",
+    email: "c2VzaGFkcmlwYWxha2thZEBnbWFpbC5jb20=",
+  },
+  {
+    name: "ASKARALI C",
+    designation: "Trade Instructor Gr.II",
+    image: "",
+    email: "YXNrYXJwb2x5QGdtYWlsLmNvbQ==",
   },
 ]);
