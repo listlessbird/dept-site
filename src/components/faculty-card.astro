@@ -1,6 +1,5 @@
 ---
 import type { Faculty } from "@/data/faculty";
-import { cn } from "@/lib/utils";
 import { Image } from "astro:assets";
 
 type Props = {} & Faculty;
@@ -8,31 +7,38 @@ type Props = {} & Faculty;
 const { name, designation, image, email } = Astro.props;
 ---
 
-<div class="bg-zinc-300 p-4 rounded-lg shadow-md max-w-[250px] fc-card">
-  <Image
-    src={image.length > 0 ? image : "/placeholder.png"}
-    alt={name}
-    class="h-48 object-cover mb-3 rounded w-full"
-    width={150}
-    height={200}
-  />
-  <h3 class="text-lg font-semibold text-pretty capitalize">{name}</h3>
-  <p class="text-sm text-gray-600 text-pretty">{designation}</p>
-  <p class="text-sm text-gray-600 text-pretty" data-enc={email}></p>
+<div class="w-full max-w-[250px] mx-auto bg-[#f5f5f5] transition-transform hover:scale-[1.02]">
+  <div class="relative w-full aspect-[3/4] bg-[#EDE3E3]">
+    <Image
+      src={image.length > 0 ? image : "/placeholder.png"}
+      alt={name}
+      class="w-full h-full object-cover"
+      width={300}
+      height={400}
+    />
+  </div>
+  <div class="bg-[#D9D9D9] px-3 sm:px-4 py-2.5 sm:py-3 text-center">
+    <h3 class="text-base sm:text-lg font-normal text-black mb-1 line-clamp-2">
+      {name}
+    </h3>
+    <p class="text-xs sm:text-sm text-[#0066ff] mb-0.5 line-clamp-1">
+      {`<${designation}>`}
+    </p>
+    <p class="text-xs sm:text-sm text-[#333333] line-clamp-1 fc-email" data-enc={email}></p>
+  </div>
 </div>
 
 <script>
-  const emailElements = document.querySelectorAll(".fc-card [data-enc]");
+  const emailElements = document.querySelectorAll(".fc-email[data-enc]");
   emailElements.forEach((element) => {
-    // @ts-ignore
     const encodedEmail = element?.dataset.enc;
     if (encodedEmail) {
       try {
         const decodedEmail = atob(encodedEmail);
-        element.textContent = decodedEmail;
+        element.textContent = `<${decodedEmail}>`;
       } catch (error) {
         console.error("Error decoding email:", error);
-        element.textContent = "Email unavailable";
+        element.textContent = "<Email unavailable>";
       }
     }
   });

@@ -3,55 +3,88 @@ import LogoWithText from "@/components/logo-with-text.astro";
 import Logo from "@/components/logo.astro";
 import { Separator } from "@/components/ui/separator";
 import { MobileNav } from "@/sections/mobile-nav";
+import { sub } from "framer-motion/client";
 
 const navItems = [
   { name: "HOME", href: "/" },
-  { name: "FACULTY", href: "/faculty" },
-  { name: "ACADEMICS", href: "/academics" },
-  { name: "RESEARCH", href: "/research" },
-  { name: "EVENTS", href: "/events" },
+  {
+    name: "PEOPLE",
+    href: "/people",
+    sub: [
+      { name: "Faculty", href: "/faculty" },
+      { name: "Staffs", href: "/technical-staff" },
+    ],
+  },
+  {
+    name: "ACADAEMICS",
+    href: "/academics",
+    sub: [
+      { name: "Acadamic programe", href: "/acadamic-programe" },
+      { name: "Admission", href: "/admission" },
+      { name: "Placements", href: "/placements" },
+    ],
+  },
+  {
+    name: "ACHIEVEMENT",
+    href: "/achievements",
+    sub: [
+      { name: "Projects", href: "/projects" },
+      { name: "Research", href: "/research/publications" },
+      { name: "Achivements", href: "/alumini" },
+    ],
+  },
+  {
+    name: "EVENTS",
+    href: "/events",
+    sub: [
+      { name: "News", href: "/news" },
+      { name: "Events", href: "/event" },
+    ],
+  },
   { name: "GALLERY", href: "/gallery" },
-  { name: "REACH US", href: "/contact" },
+  { name: "REACH US", href: "/contact-us" },
 ];
 ---
 
 <header class="flex flex-col px-4 col-start-2 col-end-[14] h-fit py-2">
-  <!-- <div class="flex gap-2 items-center">
-    <Logo />
-    <div class="flex flex-col gap-1">
-      <h1
-        class="scroll-m-20 leading-[1] text-md font-extrabold tracking-tight lg:text-3xl md:leading-normal text-pretty"
-      >
-        Department of <br />
-        Electronics and Communication Engineering
-      </h1>
-      <h2 class="md:leading-7 font-semibold leading-[1] text-sm text-pretty">
-        Goverment Engineering College Palakkad
-      </h2>
-    </div>
-  </div> -->
-
   <LogoWithText />
-
   <div class="my-2">
-    <Separator client:visible className="bg-cyanCustom h-[2px]" />
+    <Separator client:visible />
   </div>
   <nav class="">
     <div class="mx-auto px-4">
       <div class="flex items-center justify-between">
         <div class="hidden md:flex space-x-4 justify-between w-full">
           {
-            navItems.map((item, index) => (
-              <div>
-                <a
-                  href={item.href}
-                  class="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  {item.name}
-                </a>
-                {/* {index <div navItems.length - 1 && (
-              <span class="text-gray-300 self-center">|</span>
-            )} */}
+            navItems.map((item) => (
+              <div class="relative group">
+                {item.sub && item.sub?.length > 0 ? (
+                  <p class="cursor-pointer text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium">
+                    {item.name}
+                  </p>
+                ) : (
+                  <a
+                    href={item.href}
+                    class="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    {item.name}
+                  </a>
+                )}
+
+                {item.sub && (
+                  <div class="absolute left-0 py-2 top-full hidden w-48 bg-white shadow-lg group-hover:block">
+                    <div class="flex flex-col space-y-2">
+                      {item.sub.map((subItem) => (
+                        <a
+                          href={item.href + subItem.href}
+                          class="text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium"
+                        >
+                          {subItem.name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             ))
           }
