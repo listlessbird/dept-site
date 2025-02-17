@@ -1,0 +1,237 @@
+{
+  "name": "placements",
+  "years": [
+    {
+      "year": "2025",
+      "totalImages": 3,
+      "images": [
+        {
+          "name": "grantley '25",
+          "fullName": "grantley '25.jpg",
+          "extension": ".jpg",
+          "size": 162511,
+          "createdAt": "2025-02-17T07:51:07.077Z",
+          "modifiedAt": "2025-02-04T03:48:46.000Z"
+        },
+        {
+          "name": "teachnook '25",
+          "fullName": "teachnook '25.jpg",
+          "extension": ".jpg",
+          "size": 160351,
+          "createdAt": "2025-02-17T07:51:07.077Z",
+          "modifiedAt": "2025-02-04T03:48:32.000Z"
+        },
+        {
+          "name": "technologics '25",
+          "fullName": "technologics '25.jpg",
+          "extension": ".jpg",
+          "size": 55590,
+          "createdAt": "2025-02-17T07:51:07.077Z",
+          "modifiedAt": "2025-02-06T17:56:19.000Z"
+        }
+      ]
+    },
+    {
+      "year": "2024",
+      "totalImages": 14,
+      "images": [
+        {
+          "name": "PLACEMENT",
+          "fullName": "PLACEMENT.png",
+          "extension": ".png",
+          "size": 1073183,
+          "createdAt": "2025-02-17T07:51:07.069Z",
+          "modifiedAt": "2024-10-24T17:16:14.000Z"
+        },
+        {
+          "name": "acute angle",
+          "fullName": "acute angle.jpg",
+          "extension": ".jpg",
+          "size": 66456,
+          "createdAt": "2025-02-17T07:51:07.065Z",
+          "modifiedAt": "2025-02-07T03:53:26.000Z"
+        },
+        {
+          "name": "alza org '24",
+          "fullName": "alza org '24.jpg",
+          "extension": ".jpg",
+          "size": 66488,
+          "createdAt": "2025-02-17T07:51:07.065Z",
+          "modifiedAt": "2025-02-07T03:47:50.000Z"
+        },
+        {
+          "name": "br specialities llp '24",
+          "fullName": "br specialities llp '24.jpg",
+          "extension": ".jpg",
+          "size": 69587,
+          "createdAt": "2025-02-17T07:51:07.065Z",
+          "modifiedAt": "2025-02-07T03:47:50.000Z"
+        },
+        {
+          "name": "codenest '24",
+          "fullName": "codenest '24.jpg",
+          "extension": ".jpg",
+          "size": 82136,
+          "createdAt": "2025-02-17T07:51:07.065Z",
+          "modifiedAt": "2025-02-07T03:53:45.000Z"
+        },
+        {
+          "name": "kayland '24",
+          "fullName": "kayland '24.jpg",
+          "extension": ".jpg",
+          "size": 84401,
+          "createdAt": "2025-02-17T07:51:07.065Z",
+          "modifiedAt": "2025-02-07T03:47:50.000Z"
+        },
+        {
+          "name": "lakshmi '24",
+          "fullName": "lakshmi '24.jpg",
+          "extension": ".jpg",
+          "size": 66044,
+          "createdAt": "2025-02-17T07:51:07.065Z",
+          "modifiedAt": "2025-02-07T03:47:50.000Z"
+        },
+        {
+          "name": "mu sigma '24",
+          "fullName": "mu sigma '24.jpg",
+          "extension": ".jpg",
+          "size": 62356,
+          "createdAt": "2025-02-17T07:51:07.065Z",
+          "modifiedAt": "2025-02-07T03:54:20.000Z"
+        },
+        {
+          "name": "saron'24",
+          "fullName": "saron'24.jpg",
+          "extension": ".jpg",
+          "size": 62166,
+          "createdAt": "2025-02-17T07:51:07.073Z",
+          "modifiedAt": "2025-02-07T03:47:50.000Z"
+        },
+        {
+          "name": "skillovilla'24",
+          "fullName": "skillovilla'24.jpg",
+          "extension": ".jpg",
+          "size": 65457,
+          "createdAt": "2025-02-17T07:51:07.073Z",
+          "modifiedAt": "2025-02-07T03:47:50.000Z"
+        },
+        {
+          "name": "stem robotics",
+          "fullName": "stem robotics.jpg",
+          "extension": ".jpg",
+          "size": 85011,
+          "createdAt": "2025-02-17T07:51:07.073Z",
+          "modifiedAt": "2025-02-07T03:54:34.000Z"
+        },
+        {
+          "name": "sutherland'24",
+          "fullName": "sutherland'24.jpg",
+          "extension": ".jpg",
+          "size": 68493,
+          "createdAt": "2025-02-17T07:51:07.073Z",
+          "modifiedAt": "2025-02-07T03:47:50.000Z"
+        },
+        {
+          "name": "tata'24",
+          "fullName": "tata'24.jpg",
+          "extension": ".jpg",
+          "size": 81611,
+          "createdAt": "2025-02-17T07:51:07.073Z",
+          "modifiedAt": "2025-02-07T03:47:50.000Z"
+        },
+        {
+          "name": "tinkertodx'24",
+          "fullName": "tinkertodx'24.jpg",
+          "extension": ".jpg",
+          "size": 60902,
+          "createdAt": "2025-02-17T07:51:07.077Z",
+          "modifiedAt": "2025-02-07T03:47:50.000Z"
+        }
+      ]
+    },
+    {
+      "year": "2023",
+      "totalImages": 8,
+      "images": [
+        {
+          "name": "2019-23 Placements final",
+          "fullName": "2019-23 Placements final.png",
+          "extension": ".png",
+          "size": 11668791,
+          "createdAt": "2025-02-17T07:51:06.720Z",
+          "modifiedAt": "2023-07-30T14:53:41.000Z"
+        },
+        {
+          "name": "2019-23 Placements",
+          "fullName": "2019-23 Placements.png",
+          "extension": ".png",
+          "size": 12954118,
+          "createdAt": "2025-02-17T07:51:06.792Z",
+          "modifiedAt": "2023-07-30T10:09:27.000Z"
+        },
+        {
+          "name": "2019-23",
+          "fullName": "2019-23.png",
+          "extension": ".png",
+          "size": 12206345,
+          "createdAt": "2025-02-17T07:51:06.888Z",
+          "modifiedAt": "2023-07-30T14:48:33.000Z"
+        },
+        {
+          "name": "4th yr placement",
+          "fullName": "4th yr placement.png",
+          "extension": ".png",
+          "size": 9014236,
+          "createdAt": "2025-02-17T07:51:06.976Z",
+          "modifiedAt": "2023-05-02T15:27:35.000Z"
+        },
+        {
+          "name": "codderobo",
+          "fullName": "codderobo.png",
+          "extension": ".png",
+          "size": 1583738,
+          "createdAt": "2025-02-17T07:51:07.033Z",
+          "modifiedAt": "2023-05-06T07:37:08.000Z"
+        },
+        {
+          "name": "codelynks",
+          "fullName": "codelynks.png",
+          "extension": ".png",
+          "size": 1522377,
+          "createdAt": "2025-02-17T07:51:07.045Z",
+          "modifiedAt": "2023-05-31T20:03:25.000Z"
+        },
+        {
+          "name": "design alpha",
+          "fullName": "design alpha.png",
+          "extension": ".png",
+          "size": 1161135,
+          "createdAt": "2025-02-17T07:51:07.053Z",
+          "modifiedAt": "2023-06-12T04:14:16.000Z"
+        },
+        {
+          "name": "ey",
+          "fullName": "ey.png",
+          "extension": ".png",
+          "size": 321424,
+          "createdAt": "2025-02-17T07:51:07.061Z",
+          "modifiedAt": "2023-05-20T05:26:33.000Z"
+        }
+      ]
+    },
+    {
+      "year": "2022",
+      "totalImages": 1,
+      "images": [
+        {
+          "name": "bosch '22",
+          "fullName": "bosch '22.jpg",
+          "extension": ".jpg",
+          "size": 145580,
+          "createdAt": "2025-02-17T07:51:06.716Z",
+          "modifiedAt": "2024-10-24T19:21:04.000Z"
+        }
+      ]
+    }
+  ]
+}
